@@ -1,34 +1,32 @@
-// --------------------------
-// VARIABLES
-// --------------------------
+// Variables
 $maincolor: black;
 $contrastcolor: white;
-
+//Mixins
 @mixin white-text-black-bg {
-  color: $contrastcolor;
-  background-color: $maincolor;
+    color: $contrastcolor;
+    background-color: $maincolor;
 }
-
 @mixin black-test-white-bg {
-  color: $maincolor;
-  background-color: $contrastcolor;
+    color: $maincolor;
+    background-color: $contrastcolor;
 }
-
-// --------------------------
-// Header
-// --------------------------
-
+//Header
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
 nav {
-  @include white-text-black-bg;
-  display: flex;
-  justify-content: flex-start;
-
-  a {
     @include white-text-black-bg;
-
-    div {
-      margin: 10px;
-      font-size: large;
+    display: flex;
+    justify-content: flex-start;
+    a {
+        @include white-text-black-bg;
+        text-decoration: none;
+        div {
+            margin: 10px;
+            font-size: larger;
+        }
     }
-  }
 }
